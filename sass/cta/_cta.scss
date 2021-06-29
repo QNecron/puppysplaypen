@@ -1,0 +1,121 @@
+// call to action (cta)
+.cta-container {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+
+  // media
+  @include media($mq-tablet-up) {
+    padding-bottom: $space-64;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  @include media($mq-mobile) {
+    flex-direction: column;
+    padding: $space-8 $space-8 0 $space-8;
+    position: relative;
+  }
+
+}
+
+.cta-enrollment,
+.cta-reservations {
+  align-items: center;
+  background: rgba($black, .72);
+  border-left: solid $space-4 $blue;
+  box-shadow: $box-2;
+  color: $white;
+  display: flex;
+  font-weight: 900;
+  justify-content: center;
+  letter-spacing: rem(3);
+  padding-right: $space-16;
+  padding-left: $space-16;
+  text-shadow: $text-1;
+  text-transform: uppercase;
+  height: $space-56;
+
+  // media
+  @include media($mq-tablet-up) {
+    margin: 0 $space-16;
+    min-width: 16vw;
+  }
+  @include media($mq-mobile) {
+    margin-bottom: $space-8;
+    width: 100%;
+  }
+
+  &:focus,
+  &:hover {
+    background: $blue;
+  }
+
+}
+
+.cta-static {
+  @extend %black-letter;
+  border: solid rem(1) $black;
+  border-left: solid $space-4 $black;
+  box-shadow: $box-2;
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: 700;
+  margin-top: $space-16;
+  margin-right: $space-16;
+  padding: $space-16 $space-32;
+}
+
+.cta-phone,
+.cta-maps {
+  color: $white;
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.cta-phone {
+  line-height: $space-48;
+}
+
+.cta-maps {
+  margin-top: $space-8;
+
+  .maps-line-1,
+  .maps-line-2 {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+.cta-covid-19 {
+  background: $red;
+  display: block;
+  padding: 0;
+  text-align: center;
+
+  // media
+  @include media($mq-tablet-up) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .cta-response {
+    @extend %black-letter;
+    background: transparent;
+    border: 0;
+    color: $white;
+    display: block;
+    font-size: rem(12);
+    font-weight: 700;
+    padding: rem(12) $space-64;
+    width: 100%;
+  }
+
+}

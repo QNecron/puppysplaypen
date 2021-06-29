@@ -1,0 +1,13 @@
+// placeholders : typography
+%black-letter {
+  letter-spacing: rem(3);
+  text-transform: uppercase;
+}
+
+// placeholders : wrapper
+%wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $space-16;
+  padding-left: $space-16;
+}

@@ -1,0 +1,110 @@
+// form elements
+form {
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+button,
+input[type="email"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+select,
+textarea {
+  border-radius: 0;
+  color: $black;
+  outline: 0;
+  // appearance
+  -webkit-appearance: none; // safari
+  appearance: none;
+}
+
+button,
+input[type="submit"] {
+  @extend %black-letter;
+  background: $black;
+  border: 0;
+  border-left: solid $space-4 $blue;
+  color: $white;
+  display: inline-block;
+  font-weight: 700;
+  padding: $space-16 $space-32;
+
+  &:focus,
+  &:hover {
+    background: $blue;
+  }
+
+}
+
+input {
+  outline: 0;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+select,
+textarea {
+  border: solid rem(1) $black;
+  display: block;
+  padding: 0 $space-16;
+  line-height: rem(38); // 38px + 2px border = 40px
+  width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  border: solid rem(1) $black;
+  cursor: pointer;
+  height: $space-16;
+  width: $space-16;
+  position: relative;
+  top: rem(2);
+  // appearance
+  -webkit-appearance: none; // safari
+  appearance: none;
+
+  &:focus,
+  &:hover {
+    background: rgba($blue, .88);
+  }
+
+  &:checked {
+    background: rgba($black, .88);
+  }
+
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"],
+input[type="date"],
+input[type="email"],
+input[type="radio"],
+input[type="tel"],
+input[type="text"],
+select,
+textarea {
+
+  &:focus,
+  &:hover {
+    border-color: $blue;
+    box-shadow: 0 0 $space-8 rgba($blue, .88);
+  }
+
+}
+
+input[type="date"] {
+  padding: rem(10) $space-16;
+  line-height: $space-16;
+}
+
+// plugin
+@import "_forms-plugin";

@@ -1,0 +1,13 @@
+// header
+.site-header-container {
+  background: $white;
+  // height: rem(56);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}

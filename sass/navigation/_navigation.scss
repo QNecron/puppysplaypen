@@ -1,0 +1,94 @@
+// navigation
+.site-nav-container {
+
+  // medi
+  @include media($mq-tablet-up) {
+    background: rgba($black, .88);
+  }
+
+}
+
+.site-nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.site-nav-item {
+
+  // media
+  @include media($mq-tablet-up) {
+
+    &:not(:last-child) {
+      margin-right: $space-32;
+    }
+
+  }
+  @include media($mq-mobile) {
+    width: 100%;
+  }
+
+}
+
+.current-menu-item {
+
+  .site-nav-link:after {
+    opacity: 1;
+  }
+
+}
+
+.site-nav-link {
+  color: $white;
+  display: block;
+  padding: $space-16;
+  position: relative;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+
+    &:after {
+      opacity: 1;
+    }
+
+    svg {
+      fill: $blue;
+    }
+
+  }
+
+  svg {
+    fill: $white;
+    transition: all .24s ease-in-out 0s;
+  }
+
+  // media
+  @include media($mq-tablet-up) {
+
+    &:after {
+      content: "";
+      background: $blue;
+      opacity: 0;
+      height: $space-4;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transition: all .24s ease-in-out 0s;
+    }
+
+  }
+
+}
+
+.logo-paw-print {
+  height: rem(20);
+  width: rem(20);
+  vertical-align: middle;
+  position: relative;
+  top: rem(-2);
+}
+
+@import "_navigation-mobile";

@@ -1,0 +1,108 @@
+// theme
+.theme-toggle {
+  background: $blue !important; // for now...
+  border: solid rem(2) white !important; // for now...
+  box-shadow: $box-2;
+  display: none !important;
+  padding: 0;
+  height: $space-32;
+  width: $space-32;
+  outline: 0;
+  overflow: hidden;
+  position: fixed;
+  top: rem(12);
+  right: rem(12);
+  z-index: 10;
+
+  &:focus,
+  &:hover {
+
+  }
+
+  &:before {
+    content: "";
+    background: $pink;
+    height: $space-64;
+    width: $space-64;
+    position: absolute;
+    top: -144%;
+    left: -144%;
+    z-index: 1;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+  }
+
+}
+
+[data-theme="pink"] {
+
+  // forms
+  button,
+  input[type="submit"] {
+    border-color: $pink;
+
+    &:focus,
+    &:hover {
+      background: $pink;
+    }
+
+  }
+
+  // navigation
+  .site-nav-link {
+
+    &:focus,
+    &:hover {
+      color: $pink;
+
+      svg {
+        fill: $pink;
+      }
+
+    }
+
+  }
+
+  // instagram feed
+  .section-instgram {
+    background: $pink;
+  }
+
+  // cta + page nav
+  .cta-enrollment,
+  .cta-reservations,
+  .page-nav a {
+    border-color: $pink;
+
+    &:focus,
+    &:hover {
+      background: $pink;
+    }
+
+  }
+
+  .page-nav {
+
+    [class*="current"] a {
+      background: $pink;
+    }
+
+  }
+
+  // contact
+  .contact a {
+    color: $pink;
+  }
+
+  // social
+  .social-share-item {
+    color: $pink;
+
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+
+  }
+
+}

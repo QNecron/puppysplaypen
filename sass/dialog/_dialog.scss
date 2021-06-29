@@ -1,0 +1,128 @@
+.dialog-container {
+  align-items: center;
+  background: rgba($black, .64);
+  display: none;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.dialog {
+  position: relative;
+
+  a {
+    color: $blue;
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+.dialog-close {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  height: $space-40;
+  width: $space-40;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  &:focus,
+  &:hover {
+    background: $pink;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .icon-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: "";
+      background: $white;
+      height: 32%;
+      width: rem(2);
+      position: absolute;
+      top: rem(14);
+    }
+
+    &:before { transform: rotate(45deg); }
+    &:after { transform: rotate(-45deg); }
+
+  }
+
+}
+
+.dialog-content {
+  display: flex;
+
+  // media
+  @include media($mq-tablet-up) {
+    
+    .dialog-left,
+    .dialog-right {
+      flex: 1 0 50%;
+      max-width: 50%;
+    }
+
+  }
+  @include media($mq-mobile) {
+    flex-direction: column;
+  }
+
+  .dialog-right {
+    padding: $space-32;
+  }
+
+  .video {
+    line-height: 0;
+  }
+
+}
+
+.is-open {
+
+  .dialog-container {
+    display: flex;
+  }
+
+}
+
+[data-type="modal"] {
+  background: $black;
+  box-shadow: $box-2;
+  color: $white;
+  width: rem(640);
+  max-width: 80%;
+
+  // media
+  @include media($mq-mobile) {
+    overflow: scroll;
+    max-height: 94%;
+  }
+
+}

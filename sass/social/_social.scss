@@ -1,0 +1,39 @@
+// social
+[data-social-share] {
+  background: transparent;
+  display: none;
+}
+
+.social-share {
+  align-items: center;
+  background: rgba($black, .88);
+  display: flex;
+  justify-content: center;
+  padding: $space-32;
+}
+
+.social-share-item {
+  color: $blue;
+  text-align: center;
+  width: 33.3333%;
+
+  // media
+  @include media($mq-tablet-up) {
+    margin: $space-16;
+  }
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+
+  .fab {
+    font-size: rem(56);
+
+    // media
+    @include media($mq-mobile) {
+      font-size: rem(40);
+    }
+  }
+
+}

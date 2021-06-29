@@ -1,0 +1,112 @@
+// forms : plugin (contact form 7)
+.contact-form-7 {
+  border-top: solid rem(4) $black;
+  margin-top: $space-32;
+
+  textarea {
+    margin: $space-16 0;
+    max-height: rem(240);
+
+    // media
+    @include media($mq-tablet-up) {
+      width: 50%;
+    }
+
+  }
+
+  [class*="-not-valid-tip"],
+  ~ [class*="-validation-"] {
+    background: rgba($red, .08);
+    border: 0;
+    border-left: solid $space-4 $red;
+    color: $red;
+    font-size: rem(12);
+    font-weight: 400;
+    margin: $space-8 0;
+    padding: $space-8;
+  }
+
+  ~ [class*="-validation-"] {
+    margin-top: $space-32;
+  }
+
+  [class*="-control-wrap"] {
+    display: block;
+    width: 100%;
+  }
+
+  [class*="-checkbox"] {
+    display: flex;
+    flex-wrap: wrap;
+
+    > [class*="-item"] {
+      display: block;
+      margin-left: 0;
+      padding: $space-8 $space-32 $space-8 0;
+    }
+
+  }
+
+  [class*="heading-"] {
+    padding: $space-32 0 0 0;
+  }
+
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $space-16 0;
+
+  // media
+  @include media($mq-mobile) {
+    display: block;
+  }
+
+  > label {
+    flex: 1 0 50%;
+    width: 100%;
+    max-width: 50%;
+
+    // media
+    @include media($mq-tablet-up) {
+
+      &:nth-child(odd) {
+        padding-right: $space-32;
+      }
+
+      &:nth-child(even) {
+        padding-left: $space-32;
+      }
+
+    }
+    @include media($mq-mobile) {
+      max-width: 100%;
+    }
+
+  }
+
+}
+
+.form-name {
+  display: block;
+  font-weight: 700;
+  padding-top: $space-16;
+}
+
+.form-submit {
+  border-top: solid rem(4) $black;
+  margin-top: $space-16;
+  padding-top: $space-32;
+}
+
+.form-info {
+  background: rgba($blue, .08);
+  border-left: solid $space-4 $blue;
+  color: $blue;
+  display: block;
+  font-size: rem(12);
+  font-style: italic;
+  margin: $space-16 0;
+  padding: $space-16;
+}

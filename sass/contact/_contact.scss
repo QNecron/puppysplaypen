@@ -1,0 +1,41 @@
+// contact
+.section-contact {
+  background: $blue;
+  color: $black;
+
+  .contact {
+
+    // media
+    @include media($mq-tablet-up) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    @include media($mq-mobile) {
+      padding-top: 8vh;
+      text-align: center;
+    }
+
+  }
+
+  .contact-info {
+    @extend %black-letter;
+    font-size: rem(12);
+    font-weight: 700;
+    
+
+    // media
+    @include media($mq-tablet-up) {
+      padding: $space-16;
+    }
+    @include media($mq-mobile) {
+
+      &:last-child {
+        padding-top: $space-16;
+      }
+
+    }
+
+  }
+
+}

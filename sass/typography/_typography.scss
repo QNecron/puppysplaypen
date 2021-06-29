@@ -1,0 +1,42 @@
+// typography
+a {
+  outline: 0;
+  text-decoration: none;
+  transition: all .24s ease-in-out 0s;
+}
+
+p {
+  margin-top: $space-16;
+  margin-bottom: $space-16;
+}
+
+[class*="heading-"] {
+  @extend %black-letter;
+
+  &[class*="-0"] {
+    font-size: rem(32);
+  }
+
+  &[class*="-1"] {
+    font-size: rem(24);
+  }
+
+  &[class*="-2"] {
+    font-size: rem(16);
+  }
+
+  &[class*="-3"] {
+    font-size: rem(8);
+  }
+
+}
+
+.srt,
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: rem(1);
+  width: rem(1);
+  overflow: hidden;
+  position: absolute;
+}

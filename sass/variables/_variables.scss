@@ -1,0 +1,40 @@
+// variables : colors
+$black: #000;
+$white: #fff;
+$blue: #00cec9; // too light for WCAG
+$pink: #fd79a8; // too light for WCAG
+$red: #d63031;
+
+// variables : spacing
+$space-4: rem(4);
+$space-8: rem(8);
+$space-16: rem(16);
+$space-24: rem(24);
+$space-32: rem(32);
+$space-40: rem(40);
+$space-48: rem(48);
+$space-56: rem(56);
+$space-64: rem(64);
+
+// variables : media queries
+$mq-mobile: "(max-width: 767px)";
+$mq-tablet-p: "(max-width: 768px)";
+$mq-tablet-l: "(max-width: 1024px)";
+$mq-tablet-range: "(min-width: 768px) and (max-width: 1024px)";
+$mq-tablet-up: "(min-width: 768px)";
+$mq-desktop: "(min-width: 1025px)";
+
+// variables : wrappers
+$wrapper-site: rem(1408);
+$wrapper-content: rem(1024);
+
+// variables : box shadow
+$box-1: 0 rem(1) rem(3) rgba(black, .12), 0 rem(1) rem(2) rgba(black, .24);
+$box-2: 0 rem(3) rem(6) rgba(black, .16), 0 rem(3) rem(6) rgba(black, .23);
+$box-3: 0 rem(10) rem(20) rgba(black, .19), 0 rem(6) rem(6) rgba(black, .23);
+$box-4: 0 rem(14) rem(28) rgba(black, .25), 0 rem(10) rem(10) rgba(black, .22);
+$box-5: 0 rem(19) rem(38) rgba(black, .30), 0 rem(15) rem(12) rgba(black, .22);
+
+// variables : text shadow
+$text-1: rem(1) rem(3) rgba(black, .12);
+$text-2: rem(3) rem(6) rgba(black, .16);

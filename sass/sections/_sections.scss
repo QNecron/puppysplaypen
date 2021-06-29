@@ -1,0 +1,61 @@
+// sections
+.section {
+  position: relative;
+  z-index: 1;
+
+  // media
+  @include media($mq-tablet-up) {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+  }
+  @include media($mq-mobile) {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+}
+
+.section-hero,
+.section-page-hero,
+.section-cta,
+.section-contact {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-contact,
+.section-intro,
+.section-page,
+.section-nav {
+
+  .wrapper {
+    @extend %wrapper;
+    max-width: $wrapper-content;
+  }
+
+}
+
+.section-cta {
+
+  .cta-container {
+    padding-bottom: $space-32;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .cta-enrollment,
+  .cta-reservations {
+
+    &:not(:hover):not(:focus) {
+      background: $black;
+    }
+
+  }
+
+}
+
+.section-header {
+  margin-bottom: $space-32;
+  text-align: center;
+}

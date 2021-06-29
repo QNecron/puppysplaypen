@@ -1,0 +1,59 @@
+// accordion
+[data-collapse-container] {
+  margin-top: $space-16;
+}
+
+.accordion-content {
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+}
+
+.accordion-trigger {
+  position: relative;
+
+  .accordion-btn {
+    border: solid rem(1) $black;
+    border-left: solid $space-4 $black;
+    box-shadow: $box-1;
+    cursor: pointer;
+    display: block;
+    padding-left: $space-32;
+    text-decoration: none;
+    line-height: $space-40;
+    width: 100%;
+    transition: all .24s ease-in-out 0s;
+
+    &.open {
+      background: $black;
+      color: $white;
+
+      ~ .fa-icon {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  .fa-icon {
+    position: absolute;
+    top: rem(12);
+    left: $space-16;
+    transition: all .24s ease-in-out 0s;
+
+    &:before {
+      content: "\f067";
+      font-size: rem(12);
+    }
+
+  }
+
+}
+
+.accordion-content {
+  padding: $space-16;
+}

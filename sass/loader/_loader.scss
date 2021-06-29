@@ -1,0 +1,44 @@
+// loader
+[data-loader="false"] {
+
+  .loader {
+    display: none;
+  }
+
+}
+
+.loader {
+  background: $black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  // animation
+  animation: fadeaway 2s linear forwards 2s;
+
+  #puppys-playpen-logo {
+    fill: $white;
+    width: 35vw;
+    min-width: rem(256);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #puppys-playpen-logo .puppy-paw {
+    fill: $black;
+    stroke: rgba($white, .48);
+  }
+
+}
+
+@keyframes fadeaway {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  51% { opacity: 0; }
+  99% { opacity: 0; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(100%, 0); }
+}

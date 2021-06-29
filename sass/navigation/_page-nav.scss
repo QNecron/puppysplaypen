@@ -1,0 +1,69 @@
+// page navigation
+.page-nav-container {
+  width: 100%;
+
+  // media
+  @include media($mq-tablet-up) {
+    position: absolute;
+    bottom: $space-32;
+  }
+  @include media($mq-mobile) {
+    position: relative;
+  }
+
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+
+  // media
+  @include media($mq-mobile) {
+    flex-direction: column;
+    padding: $space-8;
+  }
+
+  // because custom walkers are shitty... Wordpress
+  [class*="item"] {
+
+    &:not(:last-child) {
+
+      // media
+      @include media($mq-tablet-up) {
+        margin-right: $space-32;
+      }
+      @include media($mq-mobile) {
+        margin-bottom: $space-8;
+      }
+
+    }
+
+    &[class*="current"] {
+
+      a {
+        background: $blue;
+      }
+
+    }
+
+    a {
+      @extend %black-letter;
+      background: rgba($black, .88);
+      border-left: solid $space-4 $blue;
+      box-shadow: $box-2;
+      color: $white;
+      display: block;
+      font-size: rem(12);
+      font-weight: 700;
+      padding: $space-16;
+
+      &:focus,
+      &:hover {
+        background: $blue;
+      }
+
+    }
+
+  }
+
+}

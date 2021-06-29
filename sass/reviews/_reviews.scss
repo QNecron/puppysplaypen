@@ -1,0 +1,80 @@
+// reviews
+.section-reviews {
+  background: $black;
+  color: $white;
+
+  .wrapper {
+    @extend %wrapper;
+    max-width: $wrapper-site;
+  }
+
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  // media
+  @include media($mq-mobile) {
+    flex-direction: column;
+  }
+
+}
+
+.reviews-item {
+  border: solid rem(1) rgba($white, .16);
+  font-size: rem(14);
+  padding: $space-32;
+  position: relative;
+
+  // media
+  @include media($mq-tablet-up) {
+    max-width: 25%;
+  }
+  @include media($mq-mobile) {
+    width: 100%;
+  }
+
+  &:before {
+    content: "\201D";
+    font-size: rem(160);
+    line-height: 1;
+    opacity: .08;
+    position: absolute;
+    top: 0;
+    right: $space-4;
+  }
+
+}
+
+[data-page="reviews"] {
+
+  .section-page {
+    padding-bottom: 0;
+  }
+
+  .section-reviews {
+    background: $white;
+    color: $black;
+    padding-top: 0;
+
+    .wrapper {
+      max-width: $wrapper-content;
+    }
+
+  }
+
+  .reviews-item {
+    border: solid rem(1) $black;
+  }
+
+  // media
+  @include media($mq-tablet-up) {
+
+    .reviews-item {
+      max-width: 50%;
+    }
+
+  }
+
+}
