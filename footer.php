@@ -147,56 +147,13 @@
 
 <?php if ( is_front_page() ) : ?>
 
-	<!-- modal -->
-    <div id="covid" aria-hidden="true">
-    
-      <div class="dialog-container" tabindex="-1" data-micromodal-close>
-    
-        <div class="dialog" data-type="modal" aria-modal="true" aria-label="What we're doing" role="dialog">
-          
-          <button class="dialog-close" aria-label="Close modal" data-micromodal-close>
-            <span class="icon-close" aria-hidden="true"></span>
-          </button>
-
-          <div class="dialog-content">
-          
-            <div class="dialog-left video">
-          
-              <video width="720" height="1280" controls>
-                <source src="https://tabletop-tools.com/videos/what_were_doing_compressed.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-          
-            </div>
-          
-            <div class="dialog-right">
-          
-              <h2>What we're doing</h2>
-
-              <p>In addition to social distancing, disinfecting, curbside drop 
-              off/pick up and pet food delivery we're also spraying
-              each week with a professional electrostatic service.</a>
-
-              <p>More details about <a href="https://puppysplaypen.com/covid-19/">what we're doing</a> 
-              can be found here.</p>
-
-            </div>
-          
-          </div>
-    
-        </div>
-
-      </div>
-
-    </div>
-
 	<!-- micromodal -->
-    <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <script type="text/javascript">
-      MicroModal.init({
-        disableScroll: true
-      });
-    </script>
+  <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script type="text/javascript">
+    MicroModal.init({
+      disableScroll: true
+    });
+  </script>
 
 	<!-- scroll -->
 	<script>

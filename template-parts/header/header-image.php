@@ -89,9 +89,5 @@
 		<a href="http://puppysplaypen.com/new-customers" class="cta-enrollment">New Customers</a>
 		<a href="http://puppysplaypen.com/reservations" class="cta-reservations">Reservations</a>
 	</div>
-	
-	<div class="cta-covid-19">
-    	<button class="cta-response" data-micromodal-trigger="covid">What we're doing in response to COVID-19 &#187;</button>
-    </div>
 
 </section>
