@@ -46,41 +46,43 @@ get_header(); ?>
 			  </div>
 
 			</section>
-		
+
 			<!-- instagram feed -->
 			<section class="section section-instgram">
 
-          		<div class="wrapper">
+				<div class="wrapper">
 
 					<!-- puppys_playpen_grooming puppys_playpen -->
 					<div id="instafeed" class="instagram-container" data-instagram="puppys_playpen" data-scrolled-to>
 
 					  <div class="instagram-item" data-social-share>
-						<div class="social-share">
 
-						  <a href="#" class="social-share-item facebook">
-							<span class="srt">Facebook</span>
-							<span class="fab fa-facebook-square" aria-hidden="hidden"></span>
-						  </a>
+							<div class="social-share">
 
-						  <a href="#" class="social-share-item instagram">
-							<span class="srt">Instagram</span>
-							<span class="fab fa-instagram" aria-hidden="hidden"></span>
-						  </a>
+							  <a href="#" class="social-share-item facebook">
+									<span class="srt">Facebook</span>
+									<span class="fab fa-facebook-square" aria-hidden="hidden"></span>
+							  </a>
 
-						  <a href="#" class="social-share-item youtube">
-							<span class="srt">YouTube</span>
-							<span class="fab fa-youtube" aria-hidden="hidden"></span>
-						  </a>
+							  <a href="#" class="social-share-item instagram">
+									<span class="srt">Instagram</span>
+									<span class="fab fa-instagram" aria-hidden="hidden"></span>
+							  </a>
 
-						</div>
+							  <a href="#" class="social-share-item youtube">
+									<span class="srt">YouTube</span>
+									<span class="fab fa-youtube" aria-hidden="hidden"></span>
+							  </a>
+
+							</div>
+
 					  </div>
 
 					</div>
 
-          		</div>
+        </div>
 
-        	</section>
+      </section>
 
 			<!-- awards -->
 			<?php get_template_part( 'template-parts/page/content', 'awards' ); ?>
