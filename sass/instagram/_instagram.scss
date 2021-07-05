@@ -8,6 +8,17 @@
     max-width: $wrapper-site;
   }
 
+  .section-hours {
+    @extend %black-letter;
+    font-size: rem(12);
+    font-weight: 700;
+
+    ~ .section-hours {
+      margin-left: 4vw;
+    }
+
+  }
+
   ~ .section-cta {
     margin-top: 12vh;
   }
