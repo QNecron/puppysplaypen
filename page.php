@@ -60,41 +60,8 @@ get_header(); ?>
 		<!-- grooming -->
 		<?php if ( is_page( 'grooming' ) ) : ?>
 
-			<section class="section section-instgram">
-
-			  <div class="wrapper">
-
-				<!-- puppys_playpen_grooming puppys_playpen -->
-				<div id="instafeed" class="instagram-container" data-instagram="puppys_playpen_grooming" data-scrolled-to>
-
-				  <div class="instagram-item" data-social-share>
-
-						<div class="social-share">
-
-						  <a href="#" class="social-share-item facebook">
-								<span class="srt">Facebook</span>
-								<span class="fab fa-facebook-square" aria-hidden="hidden"></span>
-						  </a>
-
-						  <a href="#" class="social-share-item instagram">
-								<span class="srt">Instagram</span>
-								<span class="fab fa-instagram" aria-hidden="hidden"></span>
-						  </a>
-
-						  <a href="#" class="social-share-item youtube">
-								<span class="srt">YouTube</span>
-								<span class="fab fa-youtube" aria-hidden="hidden"></span>
-						  </a>
-
-						</div>
-
-				  </div>
-
-				</div>
-
-			  </div>
-
-			</section>
+			<!-- gallery -->
+			<?php get_template_part( 'template-parts/page/content', 'gallery' ); ?>
 
 		<?php endif; ?>
 

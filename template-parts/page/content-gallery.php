@@ -23,22 +23,26 @@
 
     <div class="gallery">
 
-      <!-- home page -->
       <?php
 
-        if ( is_front_page() ) :
-          get_the_content(null, false, "GALLERY_HOME_POST_ID");
-        endif;
+        // display all reviews on the correct page
+        if ( is_page( 'grooming' ) ) {
+          $the_query = new WP_Query( 'cat=gallery-grooming' );
+        }
+        else {
+          $the_query = new WP_Query( 'cat=gallery-home' );
+        }
 
-      ?>
+        if ( $the_query->have_posts() ) {
 
-      <!-- grooming -->
-      <?php
+          while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            the_content();
+          }
 
-        if ( is_page('grooming') ) :
-          get_the_content(null, false, "GALLERY_GROOMING_POST_ID");
-        endif;
+        }
 
+        wp_reset_postdata();
       ?>
 
     </div>
