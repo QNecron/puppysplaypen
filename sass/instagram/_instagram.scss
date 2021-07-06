@@ -8,13 +8,36 @@
     max-width: $wrapper-site;
   }
 
+  .section-header {
+
+    // media
+    @include media($mq-tablet-up) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
   .section-hours {
     @extend %black-letter;
     font-size: rem(12);
     font-weight: 700;
 
-    ~ .section-hours {
-      margin-left: 4vw;
+    // media
+    @include media($mq-tablet-up) {
+
+      ~ .section-hours {
+        margin-left: 4vw;
+      }
+
+    }
+    @include media($mq-mobile) {
+
+      ~ .section-hours {
+        margin-top: $space-16;
+      }
+
     }
 
   }
@@ -26,7 +49,7 @@
 }
 
 .gallery {
-  columns: 3;
+  columns: 4;
   gap: $space-16;
   margin: 0 $space-16;
   line-height: 0;

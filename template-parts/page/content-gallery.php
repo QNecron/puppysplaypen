@@ -27,22 +27,36 @@
 
         // display all reviews on the correct page
         if ( is_page( 'grooming' ) ) {
-          $the_query = new WP_Query( 'cat=gallery-grooming' );
-        }
-        else {
-          $the_query = new WP_Query( 'cat=gallery-home' );
-        }
+          $the_query = new WP_Query( array( 'category_name' => 'gallery-grooming' ) );
 
-        if ( $the_query->have_posts() ) {
+          if ( $the_query->have_posts() ) {
 
-          while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            the_content();
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              get_template_part( 'template-parts/post/content', 'asset' );
+            }
+
           }
 
+          wp_reset_postdata();
+
+        }
+        else {
+          $the_query = new WP_Query( array( 'category_name' => 'gallery-home' ) );
+
+          if ( $the_query->have_posts() ) {
+
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              get_template_part( 'template-parts/post/content', 'asset' );
+            }
+
+          }
+
+          wp_reset_postdata();
+
         }
 
-        wp_reset_postdata();
       ?>
 
     </div>

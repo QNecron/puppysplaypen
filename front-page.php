@@ -33,20 +33,6 @@ get_header(); ?>
 
 		<?php if ( is_front_page() ) : ?>
 
-			<!-- store info -->
-			<section class="section section-contact" role="region">
-
-			  <div class="wrapper">
-
-				<div class="contact">
-				  <div class="contact-info">Monday-Friday 7am-7pm</div>
-				  <div class="contact-info">Saturday-Sunday 9am-5pm</div>
-				</div>
-
-			  </div>
-
-			</section>
-
 			<!-- gallery -->
 			<?php get_template_part( 'template-parts/page/content', 'gallery' ); ?>
 
